@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 //   DropdownMenuItem,
 //   DropdownMenuTrigger,
 // } from "@/components/ui/dropdown-menu"
-import { useTheme } from "@/provider/theme-provider"
+import { useTheme } from "@/context/theme-provider"
 
 import {
   Tooltip,
