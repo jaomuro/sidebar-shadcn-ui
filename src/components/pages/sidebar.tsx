@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { Link } from "react-router-dom"
 import { PanelsTopLeft } from "lucide-react"
 import { Button } from "../ui/button"
+import { Menu } from "./menu"
 
 export function SideBar() {
   const { isOpen, toogleSidebar } = useSidebar()
@@ -40,7 +41,7 @@ export function SideBar() {
             </h1>
           </Link>
         </Button>
-        {/* <Menu isOpen={isOpen} /> */}
+        <Menu />
         {/* #TODO refatorar para haver um  menu aqui*/}
       </div>
     </aside>
