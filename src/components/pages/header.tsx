@@ -2,9 +2,14 @@ import { useSidebar } from "@/context/use-sidebar"
 import { SheetMenu } from "./sheetMenu"
 import { cn } from "@/lib/utils"
 import { ModeToggle } from "../ui/theme-toogle"
+import { useLocation } from "react-router-dom"
+import { getPathInfo } from "@/lib/menu-list"
 
 export function Header() {
   const { isOpen } = useSidebar()
+
+  const { pathname } = useLocation()
+  const title = getPathInfo(pathname)
 
   return (
     <header
@@ -18,7 +23,7 @@ export function Header() {
       <div className="mx-4 sm:mx-8 flex h-14 items-center">
         <div className="flex items-center space-x-4 lg:space-x-0">
           <SheetMenu />
-          <h1 className="font-bold">Tags</h1>
+          <h1 className="font-bold">{title.label}</h1>
         </div>
         <div className="flex flex-1 items-center space-x-2 justify-end">
           <ModeToggle />

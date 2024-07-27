@@ -5,9 +5,10 @@ import {
     Bookmark,
     SquarePen,
     LayoutGrid,
-    type LucideIcon
+    type LucideIcon,
+    ReceiptEuroIcon
   } from "lucide-react";
-  
+
   type Menu = {
     href: string;
     label: string;
@@ -20,6 +21,7 @@ import {
     menus: Menu[];
   };
   
+
   export function getMenuList(pathname: string): Group[] {
     return [
       {
@@ -78,4 +80,16 @@ import {
         ]
       }
     ];
+  }
+
+
+  export function getPathInfo(pathname: string) {
+    const menuList = getMenuList(pathname)
+    const pageSelected = menuList.flatMap(item => item.menus).filter(menu => menu.href === pathname)
+
+    if(pageSelected.length >0){
+      return {label: pageSelected[0].label}
+    }
+
+    return {label: ""}
   }
