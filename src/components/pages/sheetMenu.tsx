@@ -8,6 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Link } from "react-router-dom"
+import { Menu } from "./menu"
 
 export function SheetMenu() {
   return (
@@ -30,8 +31,7 @@ export function SheetMenu() {
             </Link>
           </Button>
         </SheetHeader>
-        {/* <Menu isOpen /> */}
-        {/* #TODO Necessário adicionar o menu de itens posteriormente */}
+        <Menu />
       </SheetContent>
     </Sheet>
   )

@@ -42,7 +42,6 @@ export function SideBar() {
           </Link>
         </Button>
         <Menu />
-        {/* #TODO refatorar para haver um  menu aqui*/}
       </div>
     </aside>
   )
