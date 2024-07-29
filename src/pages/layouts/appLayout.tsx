@@ -15,6 +15,7 @@ export function AppLayout() {
         className={cn(
           "min-h-[calc(100vh_-_64px)] transition-[margin-left] ease-in-out duration-300",
           isOpen === false ? "lg:ml-[90px]" : "lg:ml-72",
+          "bg-accent/20",
         )}
       >
         <Outlet />

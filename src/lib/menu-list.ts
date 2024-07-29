@@ -39,7 +39,7 @@ import {
         groupLabel: "Contents",
         menus: [
           {
-            href: "",
+            href: "/posts",
             label: "Posts",
             active: pathname.includes("/posts"),
             icon: SquarePen,
