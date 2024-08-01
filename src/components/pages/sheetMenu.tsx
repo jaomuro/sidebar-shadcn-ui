@@ -1,6 +1,5 @@
 import { MenuIcon, PanelsTopLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-// import { Menu } from "@/components/admin-panel/menu"
 import {
   Sheet,
   SheetHeader,
@@ -9,12 +8,20 @@ import {
 } from "@/components/ui/sheet"
 import { Link } from "react-router-dom"
 import { Menu } from "./menu"
+import { useSidebar } from "@/context/use-sidebar"
 
 export function SheetMenu() {
+  const { toogleSidebar } = useSidebar()
+
   return (
     <Sheet>
       <SheetTrigger className="lg:hidden" asChild>
-        <Button className="h-8" variant="outline" size="icon">
+        <Button
+          className="h-8"
+          variant="outline"
+          size="icon"
+          onClick={() => toogleSidebar(true)}
+        >
           <MenuIcon size={20} />
         </Button>
       </SheetTrigger>
